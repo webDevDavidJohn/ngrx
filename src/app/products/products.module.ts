@@ -11,6 +11,9 @@ import { PizzaToppingsComponent } from './components/pizza-toppings/pizza-toppin
 import { ProductItemComponent } from './containers/product-item/product-item.component';
 import { ProductsComponent } from './containers/products/products.component';
 
+import {StoreModule} from '@ngrx/store';
+import {reducers} from './store';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import { ProductsComponent } from './containers/products/products.component';
     ProductsRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    StoreModule.forFeature('products' , reducers)
   ]
 })
 export class ProductsModule { }
