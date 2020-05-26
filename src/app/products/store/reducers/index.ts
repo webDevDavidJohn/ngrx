@@ -8,7 +8,7 @@ export interface ProductsState {
 
 export const reducers : ActionReducerMap<ProductsState> = {
   pizzas: fromPizzas.reducer
-}
+};
 
 export const getProductsState = createFeatureSelector<ProductsState>('products');
 
