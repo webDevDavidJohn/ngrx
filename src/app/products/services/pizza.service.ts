@@ -16,7 +16,7 @@ export class PizzaService {
 
   getPizzas(): Observable<Pizza[]> {
     return this.http
-      .get<Pizza[]>(`/api/pizzas`)
+      .get<Pizza[]>(`https://0b127892-a9fd-48bb-ae33-c5b6ca8a30f1.mock.pstmn.io/pizzas/`)
       .pipe(catchError((error: any) => throwError(error.json())));
   }
 

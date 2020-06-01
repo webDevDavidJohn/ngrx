@@ -32,9 +32,9 @@ export class PizzasEffects {
       return this.pizzaService
         .getPizzas()
         .pipe(
-          map((pizzas) => {
-           return new pizzaActions.LoadPizzasSuccess(pizzas);
-          }),
+          map(pizzas =>
+            new pizzaActions.LoadPizzasSuccess(pizzas)
+          ),
           catchError((error) => {
             console.log('error' , error);
             return of(error);

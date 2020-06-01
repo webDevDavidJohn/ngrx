@@ -22,7 +22,8 @@ export const DROP_ANIMATION = trigger('drop', [
 @Component({
   selector: 'app-pizza-display',
   templateUrl: './pizza-display.component.html',
-  styleUrls: ['./pizza-display.component.scss']
+  styleUrls: ['./pizza-display.component.scss'],
+  animations: [DROP_ANIMATION] ,
 })
 export class PizzaDisplayComponent implements OnInit {
   @Input() pizza: Pizza;

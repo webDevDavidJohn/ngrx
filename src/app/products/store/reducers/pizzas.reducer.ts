@@ -70,8 +70,8 @@ export function reducer( state = initalState, action: fromPizzas.PizzasAction): 
       };
     }
     case fromPizzas.LOAD_PIZZAS_SUCCESS: {
-      console.log('hello');
-      const data = action.payload;
+      console.log('hello' , action.payload['pizzas']);
+      const data = action.payload['pizzas'];
       return {
         ...state,
         loading: false,
