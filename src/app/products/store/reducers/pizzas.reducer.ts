@@ -54,7 +54,7 @@ export interface PizzaState {
 }
 
 export const initalState: PizzaState = {
-  data: [defaultPizza],
+  data: [],
   loaded: false,
   loading: false,
 };
@@ -63,16 +63,20 @@ export function reducer( state = initalState, action: fromPizzas.PizzasAction): 
 
   switch(action.type) {
     case fromPizzas.LOAD_PIZZAS: {
+      console.log('pizzas-load called');
       return {
         ...state,
         loading: true
       };
     }
     case fromPizzas.LOAD_PIZZAS_SUCCESS: {
+      console.log('hello');
+      const data = action.payload;
       return {
         ...state,
         loading: false,
         loaded: true,
+        data,
       };
     }
     case fromPizzas.LOAD_PIZZAS_FAIL: {
